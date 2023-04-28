@@ -1,4 +1,5 @@
 <?php
+
 class Conta
 {
     private static $numeroDeContas = 0;
@@ -26,7 +27,7 @@ class Conta
 
     public function deposita(float $valorADepositar): void
     {
-        if ($valorADepositar < 0){
+        if ($valorADepositar < 0) {
             echo 'valor precisa ser positivo';
             return;
         }
