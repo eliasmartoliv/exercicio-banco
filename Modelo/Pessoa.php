@@ -26,4 +26,5 @@ class Pessoa
             echo "Nome precisa ter pelo menos 5 caracteres";
             exit();
         }
+    }
 }
