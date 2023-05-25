@@ -2,19 +2,17 @@
 
 namespace Alura\Banco\Modelo\Funcionario;
 
+use Alura\Banco\Modelo\CPF;
 use Alura\Banco\Modelo\Pessoa;
+
 abstract class Funcionario extends Pessoa
 {
     public function __construct(
-        private string $cargo,
+        protected string $nome,
+        CPF $cpf,
         private float $salario
     ) {
-        parent::__construct(nome: $nome, cpf:  $cpf);
-    }
-
-    public function recuperaCargo(): string
-    {
-        return $this->cargo;
+        parent::__construct($nome, $cpf);
     }
 
     public function alteraNome(string $nome): void

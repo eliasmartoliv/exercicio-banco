@@ -6,7 +6,7 @@ abstract class Conta
     private static $numeroDeContas = 0;
     public function __construct(
         private Titular $titular,
-        private float $saldo = 0,
+        protected float $saldo = 0,
     ){
         self::$numeroDeContas++;
     }
@@ -37,9 +37,14 @@ abstract class Conta
         $this->saldo += $valorADepositar;
     }
 
+    public function recuperaSaldo(): float
+    {
+        return $this->saldo;
+    }
+
     public function recuperaTitular(): string
     {
-        return "{$this->titular->recuperaCpfTitular()} {$this->titular->recuperaNomeTitular()}";
+        return "{$this->titular->recuperaCpf()} {$this->titular->recuperaNome()}";
 
     }
 
