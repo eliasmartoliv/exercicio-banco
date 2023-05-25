@@ -47,5 +47,4 @@ class Endereco
     {
         $this->$nomeAtributo = $value;
     }
-
 }
