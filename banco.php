@@ -38,5 +38,5 @@ $primeiraConta->saca(100);
 $segundaConta->deposita(1000);
 $segundaConta->saca(100);
 
-echo $primeiraConta->recuperaSaldo() .PHP_EOL;
-echo $segundaConta->recuperaSaldo() .PHP_EOL;
+echo $primeiraConta->recuperaSaldo() . PHP_EOL;
+echo $segundaConta->recuperaSaldo() . PHP_EOL;

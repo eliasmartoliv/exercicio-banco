@@ -1,5 +1,6 @@
 <?php
-// Teste método mágico __toString
+
+// Teste métodos mágicos:
 
 require_once 'autoload.php';
 
@@ -12,4 +13,12 @@ $enderecoQualquer = new Endereco(
     '00'
 );
 
+// método __toString():
+echo $enderecoQualquer . PHP_EOL;
+
+// método __get():
+echo $enderecoQualquer->bairro . PHP_EOL;
+
+// método __set():
+echo $enderecoQualquer->cidade = 'São Paulo' . PHP_EOL;
 echo $enderecoQualquer;
