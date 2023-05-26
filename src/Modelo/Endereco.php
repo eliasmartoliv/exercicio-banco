@@ -4,6 +4,7 @@ namespace Alura\Banco\Modelo;
 
 class Endereco
 {
+    use AcessoAtributos;
     public function __construct(
         private string $cidade,
         private string $bairro,
@@ -35,12 +36,6 @@ class Endereco
     public function __toString(): string
     {
         return "{$this->rua}, {$this->numero}, {$this->bairro}, {$this->cidade}";
-    }
-
-    public function __get(string $nomeAtributo): string
-    {
-        $metodo = 'recupera' . ucfirst($nomeAtributo);
-        return $this->$metodo();
     }
 
     public function __set(string $nomeAtributo, $value): void
